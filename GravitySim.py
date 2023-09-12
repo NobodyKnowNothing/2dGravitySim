@@ -72,7 +72,7 @@ class Object(pygame.sprite.Sprite):
                         dist = 1
                         dx, dy = dx / dist, dy / dist
                     if (self.rad + entity.rad) < dist and gravTog == False:
-                        F = (G*(self.mass * entity.mass))/(dist**2)
+                        F = (G*(self.mass * entity.mass))/(dist)
                         A = F/self.mass
                         self.acc += vec(dx, dy) * A
                     if (self.rad + entity.rad) > dist:
